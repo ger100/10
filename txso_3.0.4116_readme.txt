@@ -1,0 +1,390 @@
+<<USE COURIER REGULAR 10 FONT IF YOU WOULD LIKE TO PRINT THIS DOCUMENT>>
+TXOne Networks, Inc.                               January 29, 2024
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  TXOne StellarOne for StellarProtect/StellarProtect (Legacy Mode) 
+                    3.0 Service Pack 1 Patch 2
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  NOTE: This readme file was current as of the date above. Support 
+  for TXOne Networks products is mutually provided by TXOne Networks 
+  and Trend Micro. All technical support goes through TXOne Networks
+  and Trend Micro engineers. All customers are advised to check the 
+  following website for documentation updates:
+
+  https://help.txone.com/
+  https://success.trendmicro.com/
+
+  TXOne Networks always seeks to improve its documentation.
+  If you have questions, comments, or suggestions about this or 
+  any TXOne Networks documents, please contact us at
+  docs@txone-networks.com. Your feedback is always welcome.
+
+  Please evaluate this documentation on the following site:
+
+  https://docs.trendmicro.com/en-us/documentation/productgroup/?gro
+  upname=security-for-iot-and-ot
+
+====================================================================
+  Contents
+====================================================================
+
+  1. About TXOne Stellar
+
+  2. What's New
+
+  3. Documentation Set
+
+  4. System Requirements
+
+  5. Installation
+
+  6. Known Issues
+
+  7. Release History
+
+  8. Contact Information
+
+  9. About TXOne Networks
+
+  10. License Agreement
+
+====================================================================
+1. About TXOne Stellar
+====================================================================
+
+  TXOne Stellar provides a context-focused security solution for OT 
+  endpoints and cyber-physical systems (CPS), aiming to defend 
+  operation stability with continuous detection and response aligned 
+  to the specific requirements of the OT domain.
+
+  TXOne Stellar platform is composed of the centralized management 
+  console server and unified agents apt for legacy OT devices and 
+  modern cyber-physical systems.
+
+  - StellarOne, designed to streamline administration of the agents 
+    installed on modernized systems and legacy systems, along with 
+    its intuitive centralized management, consistent policy 
+    enforcement, and action-oriented alerts that empower security 
+    teams of all sizes and skill levels to successfully mature 
+    their organization’s security posture.
+
+  - StellarProtect / StellarProtect (Legacy Mode), using the 
+    single-agent design that delivers seamless asset-centric 
+    protection and ensures coverage for modern CPS and legacy OT 
+    devices throughout their entire asset lifecycle. The lightweight 
+    unified agent simplifies security by combining CPS Detection and 
+    Response (CPSDR), threat prevention, operations lockdown, and 
+    device control.
+
+    - CPSDR: Embodied within the advanced Operations Behavior 
+      Anomaly Detection feature, which establishes a unique baseline 
+      fingerprint of each agent-device during practicable operating 
+      states and performs fingerprint deviation analysis by means of 
+      an expansive industrial application repository and ransomware 
+      detection engine to defend against unexpected changes that may 
+      impact stability. Moreover, TXOne Stellar brings the 
+      contextualization of security into an operation-led view to 
+      allow both the operation and security teams to achieve their 
+      goals without needing to compromise.
+      
+    - Multi-Method Threat Prevention: Provides advanced threat scan 
+      on the basis of ICS root of trust and operations-focused machine
+      learning to secure the agent-devices against known and unknown 
+      malware threats without compromising operational availability.
+      
+    - Operations Lockdown: For fixed-function and devices with limited 
+      patching availability,operations lockdown enforcement prohibits 
+      unauthorized changes, including alterations to registry and 
+      function parameters.
+      
+    - Trusted Peripheral Control: Unauthorized access from external 
+      sources, such as USB devices, is configurable and controlled to 
+      reduce physical access threats.
+
+  Leveraging an expansive ICS application and certificate library and 
+  exclusive ransomware detection engine, TXOne Stellar maintains CPS 
+  operational integrity through behavioral anomaly detection and 
+  eliminates configuration drift for legacy and fixed-use assets with 
+  device lockdown. Security teams can confidently deliver detection 
+  and response outcomes across the OT terrain, with TXOne Stellar 
+  effectively secure organization's security posture while maintaining 
+  its business operations stability.
+
+====================================================================
+  2. What's New
+====================================================================
+
+  The TXOne StellarOne web console now addresses the following issues.
+ 
+  TXOne StellarOne 3.0.4116: 
+    
+  2.1 Resolved Known Issues
+  ===================================================================
+  
+  - [StellarProtect] Unable to sync with StellarOne after StellarOne 
+     imported trusted certificates containing non-latin-1 characters 
+     [SEG-144826]
+
+  - Upgrade OpenSSH module [SEG-144864]
+	 
+====================================================================
+  3. Documentation Set
+====================================================================
+
+  To download or view electronic versions of the documentation for
+  this product, please visit https://docs.trendmicro.com.
+
+  - Installation Guide (IG): The Installation Guide contains
+    information on requirements and procedures for installing
+    and deploying TXOne StellarOne.
+
+  - Administrator's Guide (AG): Provides post-installation 
+    instructions on how to configure the settings to help you
+    use TXOne StellarOne's management features. Also includes
+    instructions on performing other administrative tasks for 
+    the configuration and monitor of StellarProtect or 
+    StellarProtect (Legacy Mode) agents.
+
+  - Support Portal: The Support Portal contains information on
+    troubleshooting and resolving known issues.
+
+    To access the Support Portal, go to success.trendmicro.com
+
+====================================================================
+  4. System Requirements
+====================================================================
+
+  StellarOne is packaged in an Open Virtual Appliance (OVA) 
+  format or Virtual Hard Disk v2 (VHDX) format. Different package 
+  files respectively apply to different hypervisors.
+
+====================================================================
+  4.1 Supported Hypervisor 
+====================================================================
+
+  a. OVA file format:
+  
+  - VMWare ESXi 6.5 or above
+
+  - VMware Workstation 16 Pro or above
+  
+  
+  b. VHDX file format:
+  
+  - Windows Server 2019, Hyper-V Manager Windows 10 or above
+  
+====================================================================
+  4.2 Supported Browser 
+====================================================================
+
+  - Google Chrome 87 or above
+
+  - Microsoft Edge 79 or above
+
+  - Mozilla Firefox 78 or above
+
+  NOTE: Minimum supported resolution is 1366*768.
+
+====================================================================
+  5. Installation
+====================================================================
+
+  Please see the Installation Guide.
+  
+  NOTE:
+  1. StellarOne 2.0 does not support using .acf patch file for 
+     firmware upgrade from older versions via StellarOne web console.
+     It requires importing the .ova or .vhdx file to the new instance 
+     and mounting the 2nd external disk from the previous StellarOne 
+     instance for upgrade.
+  
+  2. StellarOne 2.0 ONLY supports mount upgrade from version 1.2 
+     or 1.2 Patch 1. Make sure you upgrade StellarOne 1.0 or 1.1 to 
+     version 1.2 before upgrading to 2.0.
+     
+  3. StellarOne 1.1 ONLY supports mount upgrade from version 1.0.
+     
+  4. StellarOne 2.2 supports firmware upgrade from 2.0 or 2.1, or 
+     mount upgrade from 1.2 Patch 1.
+  
+  5. The Active Update server link has been changed to 
+     http://ttau.cs.txone.com. Please ensure that you whitelist this 
+     URL in your firewall.
+	 
+  6. Firmware upgrade may take longer than before. Please do not 
+     reboot StellarOne during the upgrade process.
+  
+====================================================================
+  5.1 Prescan
+====================================================================
+
+  The prescan function can scan the whole device to add all present 
+  OT/ICS applications to the Approved List before StellarProtect is 
+  activated.
+
+  - Before the prescan, please empty the recycle bin.
+
+  - The prescan process may take 30 minutes to 5 hours, depending
+    on how many apps are installed on the device.
+
+  - It is strongly recommended NOT to skip the prescan. If the 
+    prescan is skipped, it may cause later delays in the operation
+    of OT/ICS applications.
+
+====================================================================
+  6. Known Issues
+====================================================================
+
+  Known issues in this release are listed below, in 6.1 - 6.3:
+
+  ==================================================================
+  6.1 StellarProtect (Legacy Mode)
+  ==================================================================
+
+  a. Upon the completion of StellarOne server scanning, the 
+     consumed memory will not be released.
+     
+  b. To upgrade agents on Windows XP SP3 platform to version 1.2 or 
+     later versions, please upgrade the agents to 1.1.1014 first.
+
+  c. StellarProtect (Legacy Mode) installed on Windows 2000 SP4 or 
+     Windows XP SP1 does not support "quarantine" scan action; 
+     however, the agent event logs shown on StellarOne (event ID: 
+     8011) would still allow users to select "quarantine" scan 
+     action. [STR-947]
+       
+  d. Display incorrect file information in Event Details [STR-1277]
+  
+  e. The option of scan removable drives for specific folders does not 
+     work when enabled via API or StellarOne GUI settings. [STR-1633]
+     
+  ==================================================================
+  6.2 StellarProtect
+  ==================================================================
+
+  a. The default policy settings for StellarProtect with OEM license
+     does not have the lockdown function enabled. [STR-1535]
+     
+  b. No data to display on the agent events screen if you are not on 
+     page 1 and then select the amount to display per page that 
+     exceeds the total amount of agent events. [STR-1547]
+     
+  c. Agent Password policy setting might not function properly. 
+     If the group/agent policy has been changed to customized, make 
+     sure you reset the agent password for better password 
+     management. [STR-1540]
+     
+  d. Operations Behavior Anomaly Detection - 
+     Currently the agent console does not support the learning time 
+     setting, which is available only on the StellarOne console. If 
+     you enable the Operations Behavior Anomaly Detection or switch 
+     between the modes on the agent console, the setting will be 
+     applied immediately but will be overwritten the next time 
+     StellarOne applies its policy to the agent. [STR-1408]
+     
+  e. StellarOne 3.0 cannot correctly display the Operations Behavior 
+     Anomaly Detection settings of the agent with older version 
+     [STR-1572]
+     Workaround: upgrade the agent to version 3.0.
+       
+  f. StellarOne 3.0 cannot display the newly learned script behaviors 
+     of the agent with older version [STR-1407]
+     Workaround: upgrade the agent to version 3.0.
+     
+  g. Unable to remotely patch agents if Windows Event Viewer is 
+     opened on the endpoints. [STR-1427]
+     
+  ==================================================================
+  6.3 StellarOne
+  ==================================================================
+  
+  a. StellarOne 2.0 does not support using .acf patch file for 
+     firmware upgrade via StellarOne web console. It requires 
+     importing the .ova or .vhdx file to the new instance and 
+     mounting the 2nd external disk from the previous StellarOne 
+     instance for upgrade.
+     
+  b. No data to display on the agent events screen if you are not on 
+     page 1 and then select the amount to display per page that 
+     exceeds the total amount of agent events. [STR-1547]
+     
+  c. For StellarOne installed on AWS virtual machine, the vShell 
+     command does not work after you use firmware to upgrade 
+     StellarOne from 2.1 to 2.2. [STR-1545]
+     
+  d. StellarOne 2.2 revises maximum scan file size to 2048 MB. Be 
+     sure to change the scan file size to less than 2048 MB after 
+     upgrading StellarOne to 2.2. [STR-1549]
+
+  e. The hash values file generated from the file hash generator 
+     downloaded from StellarOne with version earlier than 2.2 can not
+     be imported to the Trusted Hash Values policy setting.
+     [STR-1538]  
+     
+  f. Unable to show whether the manual change to the Situational 
+     Awareness baseline is applied to the agent or not. [STR-1570]
+     
+  g. The "Start Learning" may still exist on the Situational 
+     Awareness page even though you have enabled the Operations Behavior 
+     Anomaly Detection and toggled on the associated pillar of 
+     protection such as Script Behavior, User Login, or Application 
+     Behavior. It will disappear when at least one item is added to 
+     the associated baseline. [STR-1568]
+     
+  h. Displays monitored processes or scripts with quotation marks in 
+     Situational Awareness Script Behaviors baseline. Search result 
+     is unavailable if the search strings contain quotation marks. 
+     [STR-1628]
+     Workaround: Delete the quotation marks in the search strings.
+     
+  i. For files with the same hash but located in different paths, 
+     once the "Add to Baseline" action is taken on one of the files, 
+     the action will also apply to the rest of the files. [STR-1632]
+
+====================================================================
+  7. Release History
+====================================================================
+
+  For more information about updates to this product, go to:
+  https://www.trendmicro.com/download
+
+  TXOne StellarOne 3.0.4116 - January 29, 2024
+  TXOne StellarOne 3.0.4115 - December 21, 2023
+  TXOne StellarOne 3.0.3153 - September 28, 2023
+  TXOne StellarOne 3.0.2103 - September 7, 2023
+  TXOne StellarOne 3.0.1169 - July 28, 2023
+
+====================================================================
+  8. Contact Information
+====================================================================
+
+  A license to TXOne Networks software usually includes the right
+  to product updates, pattern file updates, and basic technical
+  support for one (1) year from the date of purchase. After the
+  first year, you must renew the license on an annual basis at
+  TXOne's then-current maintenance fees.
+
+  Contact TXOne Networks via fax, phone, and email, or visit our
+  website to download evaluation copies of TXOne products.
+
+  https://www.txone.com/contact/
+  
+  NOTE: This information is subject to change without notice.
+
+====================================================================
+  9. About TXOne Networks
+====================================================================
+
+  TXOne Networks Inc. offers cybersecurity solutions to protect
+  industrial control systems (ICS), ensuring reliability and
+  safety from cyberattacks.
+
+====================================================================
+  10. License Agreement
+====================================================================
+
+  View information about your license agreement with TXOne 
+  Networks at:
+  
+  https://www.txone.com/legal/license-agreements/
